@@ -55,7 +55,7 @@ get_header();
                     partnerships to expand our reach and impact.
                   </p>
                   <a
-                    href="about-us.html"
+                    href="<?php echo get_the_permalink()?>"
                     class="btn border border-secondary rounded-pill px-3 text-primary"
                   >
                     LEARN MORE

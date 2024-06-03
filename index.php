@@ -37,7 +37,7 @@ get_header();
                       Elevate your dishes and bring new depth to your cooking
                       with our organic herbs
                     </h1>
-                    <a href="#" class="btn px-4 py-2 text-white rounded">
+                    <a href="#products_services_section" class="btn px-4 py-2 text-white rounded">
                       EXPLORE OUR PRODUCTS
                     </a>
                   </div>
@@ -55,7 +55,7 @@ get_header();
                       way to add flavor to your meals, our organic herbs are the
                       perfect choice.
                     </h2>
-                    <a href="#" class="btn px-4 py-2 text-white rounded">
+                    <a href="#products_services_section" class="btn px-4 py-2 text-white rounded">
                       EXPLORE OUR PRODUCTS
                     </a>
                   </div>
@@ -68,7 +68,7 @@ get_header();
                   />
                   <div class="content">
                     <h2>Dedicated to provide the highest quality herbs</h2>
-                    <a href="#" class="btn px-4 py-2 text-white rounded">
+                    <a href="#products_services_section"  class="btn px-4 py-2 text-white rounded">
                       EXPLORE OUR PRODUCTS
                     </a>
                   </div>
@@ -172,7 +172,7 @@ get_header();
         </div>
         <div class="text-center mt-4">
           <a
-            href="about-us.html"
+            href="<?php echo site_url('/about-us')?>"
             class="btn px-4 py-2 text-white rounded bg-primary"
           >
             LEARN MORE
@@ -223,7 +223,7 @@ get_header();
                     partnerships to expand our reach and impact.
                   </p>
                   <a
-                    href="about-us.html"
+                    href="<?=site_url('/about-us')?>"
                     class="btn border border-secondary rounded-pill px-3 text-primary"
                   >
                     LEARN MORE
@@ -258,7 +258,7 @@ get_header();
                 digital transformation journey towards success.
               </p>
               <a
-                href="contact.html"
+                href="<?=site_url('/contact-us')?>"
                 class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5"
               >
                 Contact Us
@@ -280,7 +280,7 @@ get_header();
     <!-- Banner Section End -->
 
     <!-- Fruits Shop Start-->
-    <div class="container-fluid fruite products_services_section py-5">
+    <div class="container-fluid fruite products_services_section py-5" id="products_services_section">
       <div class="container py-5">
         <div class="text-center mx-auto mb-5" style="max-width: 700px">
           <h2 class="display-4">Products & Services</h2>
@@ -358,7 +358,7 @@ get_header();
                     you achieve your farming goals.
                   </p>
                   <a
-                    href="contact.html"
+                    href="<?=site_url('/contact-us')?>"
                     class="btn border border-secondary rounded-pill px-3 text-primary"
                   >
                     Contact Us

@@ -86,7 +86,7 @@ $menu_items = wp_get_menu_array_footer('greentech_footer_menu_1');
                   entrepreneurs, GREENTEC aims...
                 </p>
                 <a
-                  href="index.html#visionMission"
+                  href="<?php echo site_url('/')?>#visionMission"
                   class="btn border-secondary py-2 px-4 rounded-pill text-primary"
                 >
                   Read More
@@ -155,7 +155,7 @@ $menu_items = wp_get_menu_array_footer('greentech_footer_menu_1');
           <div class="row">
             <div class="text-center">
               <span class="text-light">
-                <a href="#">
+                <a href="<?=site_url()?>">
                   <i class="fas fa-copyright text-light me-2"></i>GreenTec</a
                 >, All right reserved.
               </span>
