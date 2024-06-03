@@ -1,0 +1,135 @@
+img {
+  max-width: 100%;
+}
+.navbar-brand img {
+  max-width: 280px;
+}
+footer .navbar-brand img {
+  max-width: 200px;
+}
+footer a.btn-link {
+  width: max-content;
+}
+.featurs_section .featurs-item {
+  height: 100%;
+}
+.see-more-button {
+  color: var(--bs-primary);
+  cursor: pointer;
+  display: inline;
+}
+.service .content_column_main {
+  position: relative;
+  min-height: 180px;
+}
+.service .service-item img {
+  min-height: 275px;
+  max-height: 275px;
+  object-fit: cover;
+}
+.small_text {
+  font-size: 14px;
+  line-height: 19px;
+  display: inline-block;
+}
+.banner_sec .banner_img {
+  /* transform: rotate(180deg); */
+}
+.fruite .hydroponics_img {
+  max-height: 270px;
+  object-fit: contain;
+}
+.products_services_section .products_content_part {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* min-height: 219px; */
+}
+.services_slider_section .rounded-bottom.text-start {
+  min-height: 199px;
+}
+.contact .address_text_col a {
+  color: #747d88;
+}
+.contact .address_text_col a:hover {
+  color: var(--bs-primary);
+}
+.fruite ._single_item {
+  display: inline-block;
+  height: 100%;
+}
+.SingleCaseStudies ._single_item {
+  margin-bottom: 1.2rem;
+}
+.SingleCaseStudies ._single_item,
+.SingleCaseStudies .fruite-item {
+  height: auto;
+}
+.fruite ._single_item .small_text {
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.navbar-toggler {
+  box-shadow: none !important;
+}
+.service .service-item h3 {
+  font-size: 1.3rem;
+}
+.contact form textarea {
+  min-height: 142px;
+}
+
+@media only screen and (max-width: 1399px) {
+  .services_slider_section .rounded-bottom.text-start {
+    min-height: 237px;
+  }
+  .contact form textarea {
+    min-height: 167px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .services_slider_section .rounded-bottom.text-start {
+    min-height: 220px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .carousel-item .content h2 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .carousel-item img {
+    max-height: 550px !important;
+    min-height: 550px !important;
+  }
+}
+@media only screen and (max-width: 991px) {
+  .services_slider_section .rounded-bottom.text-start {
+    min-height: 175px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .navbar-brand img {
+    max-width: 200px;
+  }
+  .carousel-item .content h2 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .carousel-item img {
+    max-height: 400px !important;
+    min-height: 400px !important;
+  }
+  .services_slider_section .rounded-bottom.text-start {
+    min-height: auto;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .service .service-item img,
+  .fruite .fruite-item .fruite-img img {
+    min-height: 225px;
+    max-height: 225px;
+  }
+}
