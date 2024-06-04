@@ -21,9 +21,9 @@ $menu_items = wp_get_menu_array_footer('greentech_footer_menu_1');
           >
             <div class="row g-4 align-items-center">
               <div class="col-lg-3">
-                <a href="index.html" class="navbar-brand">
+                <a href="<?php echo site_url()?>" class="navbar-brand">
                   <img
-                    src="<?=GREENTECH_THEME_ASSETS_URI.'img/greentec-logo-footer.png'?>"
+                    src="<?=get_option('site_logo_footer')?>"
                     alt="GreenTec Logo"
                   />
                 </a>
@@ -51,25 +51,25 @@ $menu_items = wp_get_menu_array_footer('greentech_footer_menu_1');
                 <div class="d-flex justify-content-end">
                   <a
                     class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
-                    href=""
+                    href="<?=get_option('greentech_twitter')?>"
                   >
                     <i class="fab fa-twitter"></i>
                   </a>
                   <a
                     class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
-                    href=""
+                    href="<?=get_option('greentech_facebook')?>"
                   >
                     <i class="fab fa-facebook-f"></i>
                   </a>
                   <a
                     class="btn btn-outline-secondary me-2 btn-md-square rounded-circle"
-                    href=""
+                    href="<?=get_option('greentech_youtube')?>"
                   >
                     <i class="fab fa-youtube"></i>
                   </a>
                   <a
                     class="btn btn-outline-secondary btn-md-square rounded-circle"
-                    href=""
+                    href="<?=get_option('greentech_linkedln')?>"
                   >
                     <i class="fab fa-linkedin-in"></i>
                   </a>
@@ -82,8 +82,7 @@ $menu_items = wp_get_menu_array_footer('greentech_footer_menu_1');
               <div class="footer-item">
                 <h4 class="text-light mb-3">Our Vision and Mission</h4>
                 <p class="mb-4">
-                  Founded in 2009 by a team of passionate engineers and
-                  entrepreneurs, GREENTEC aims...
+                 <?php echo get_option('greentech_footer_mission_vision')?>
                 </p>
                 <a
                   href="<?php echo site_url('/')?>#visionMission"
@@ -127,19 +126,18 @@ $menu_items = wp_get_menu_array_footer('greentech_footer_menu_1');
               <div class="footer-item">
                 <h4 class="text-light mb-3">Contact</h4>
                 <p>
-                  <strong>Address:</strong> Taman Melati Utama, Setapak, 53100
-                  Kuala Lumpur
+                  <strong>Address:</strong> <?=get_option('greentech_address')?>
                 </p>
                 <p>
                   <strong>Email:</strong>
-                  <a class="text-white-50" href="mailto:info@greentek.my">
-                    info@greentek.my
+                  <a class="text-white-50" href="mailto:<?=get_option('greentech_email')?>">
+                  <?=get_option('greentech_email')?>
                   </a>
                 </p>
                 <p>
                   <strong>Phone:</strong>
-                  <a class="text-white-50" href="tel:6013-2042049">
-                    6013-2042049
+                  <a class="text-white-50" href="tel:<?=get_option('greentech_phone')?>">
+                  <?=get_option('greentech_phone_number')?>
                   </a>
                 </p>
               </div>

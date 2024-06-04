@@ -9,7 +9,7 @@
 $GREENTECH         = wp_get_theme();
 $theme_version = $GREENTECH->get('Version');
 
-if (defined('WP_DEBUG')) {
+if (WP_DEBUG) {
 	$theme_version = current_time('timestamp'); //for development time only
 }
 
@@ -153,8 +153,8 @@ add_action( 'widgets_init', 'greentech_widgets_init' );
 function greentech_scripts() {
 	wp_enqueue_style( 'greentech-style', get_stylesheet_uri(), array(), GREENTECH_THEME_VERSION );
 
-	wp_register_style('font_1',  'https://fonts.googleapis.com', array(), GREENTECH_THEME_VERSION);
-	wp_register_style('font_2',  'https://fonts.gstatic.com', array(), GREENTECH_THEME_VERSION);
+	wp_register_style('font_1',  'https://fonts.googleapis.com', array(), false,'all');
+	wp_register_style('font_2',  'https://fonts.gstatic.com', array(), false,'all');
 	wp_register_style('font_3',  'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap', array(), GREENTECH_THEME_VERSION);
 	wp_register_style('font_awosome',  'https://use.fontawesome.com/releases/v5.15.4/css/all.css', array(), GREENTECH_THEME_VERSION);
 	wp_register_style('bs_icon',  'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css', array(), GREENTECH_THEME_VERSION);
@@ -221,6 +221,25 @@ function greentech_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'greentech_scripts' );
 
+
+
+function admin_enqueue_scripts_load()
+{
+
+
+
+	wp_register_script('sweet-alert-admin', 'https://cdn.jsdelivr.net/npm/sweetalert2@11', array(), GREENTECH_THEME_VERSION, true);
+
+	wp_enqueue_script('sweet-alert-admin');
+
+	wp_enqueue_media();
+
+	if (is_singular() && comments_open() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
+	}
+}
+add_action('admin_enqueue_scripts', 'admin_enqueue_scripts_load');
+
 /**
  * Implement the Custom Header feature.
  */
@@ -251,6 +270,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 require get_template_directory() . '/inc/custom-post-create.php';
 
 require get_template_directory() . '/inc/nav-menu.php';
+
+require get_template_directory() . '/inc/settings-api.php';
 
 function dd(...$vars) {
     foreach ($vars as $var) {
@@ -373,3 +394,49 @@ function what_we_do_load_more()
 	  ); 
 	wp_die();
 }
+
+
+function option_page_site_information()
+{
+	//echo "touhid";
+	$security = $_POST['nonce'];
+	if (!wp_verify_nonce($security, 'admin-ajax-nonce')) {
+		echo 'Hei Dear, What are you looking for?';
+	} else {
+		$formdata = array();
+		parse_str($_POST['formdata'], $formdata);
+		foreach ($formdata as $key => $value) {
+
+			update_option($key,  $value);
+		}
+
+		$resposedata = array(
+			'success' => 'success'
+		);
+		echo json_encode($resposedata);
+	}
+	wp_die();
+}
+add_action('wp_ajax_option_page_site_information', 'option_page_site_information');
+
+function option_page_display_options_social()
+{
+	$security = $_POST['nonce'];
+	if (!wp_verify_nonce($security, 'admin-ajax-nonce')) {
+		echo 'Hei Dear, What are you looking for?';
+	} else {
+		$formdata = array();
+		parse_str($_POST['formdata'], $formdata);
+		foreach ($formdata as $key => $value) {
+
+			update_option($key,  esc_url($value));
+		}
+
+		$resposedata = array(
+			'success' => 'success'
+		);
+		echo json_encode($resposedata);
+	}
+	wp_die();
+}
+add_action('wp_ajax_option_page_display_options_social', 'option_page_display_options_social');

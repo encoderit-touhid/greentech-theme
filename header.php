@@ -46,14 +46,13 @@
             <small class="me-3">
               <i class="fas fa-map-marker-alt me-2 text-secondary"></i>
               <a href="#" class="text-white">
-                <!-- No. 63-2, Tingkat 2, Jalan Melati Utama 4,  -->Taman Melati
-                Utama, Setapak, 53100 Kuala Lumpur
+                <!-- No. 63-2, Tingkat 2, Jalan Melati Utama 4,  --><?=get_option('greentech_address')?>
               </a>
             </small>
             <small class="me-3">
               <i class="fas fa-envelope me-2 text-secondary"></i>
-              <a href="mailto:info@greentek.my" class="text-white"
-                >info@greentek.my
+              <a href="mailto:<?=get_option('greentech_email')?>" class="text-white"
+                ><?=get_option('greentech_email')?>
               </a>
             </small>
           </div>
@@ -62,7 +61,7 @@
       <div class="container px-0">
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
           <a href="<?php echo site_url()?>" class="navbar-brand">
-            <img src="<?=GREENTECH_THEME_ASSETS_URI.'img/greentec-logo.png'?>" alt="GreenTec Logo" />
+            <img src="<?=get_option('site_logo')?>" alt="GreenTec Logo" />
           </a>
           <button
             class="navbar-toggler py-2 px-3"
