@@ -44,8 +44,7 @@ get_header();
                   <div>
                     <h5>Address</h5>
                     <p class="mb-0">
-                      No. 63-2, Tingkat 2, Jalan Melati Utama 4, Taman Melati
-                      Utama, Setapak, 53100 Kuala Lumpur
+                      <?=get_option('greentech_address')?>
                     </p>
                   </div>
                 </div>
@@ -54,7 +53,7 @@ get_header();
                 <div>
                   <h5>Mail Us</h5>
                   <p class="mb-0">
-                    <a href="mailto:info@greentek.my">info@greentek.my</a>
+                    <a href="mailto:<?=get_option('greentech_email')?>"><?=get_option('greentech_email')?></a>
                   </p>
                 </div>
               </div>
@@ -63,7 +62,7 @@ get_header();
                 <div>
                   <h5>Telephone</h5>
                   <p class="mb-0">
-                    <a href="tel:6013-2042049">6013-2042049</a>
+                    <a href="tel:<?=get_option('greentech_phone_number')?>"><?=get_option('greentech_phone_number')?></a>
                   </p>
                 </div>
               </div>
