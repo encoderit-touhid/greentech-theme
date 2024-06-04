@@ -9,7 +9,7 @@ get_header();
       <ol class="breadcrumb justify-content-center mb-0">
         <li class="breadcrumb-item"><a href="<?php echo site_url()?>">Home</a></li>
         <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
-        <li class="breadcrumb-item active text-white">About Us</li>
+        <li class="breadcrumb-item active text-white">Contact Us</li>
       </ol>
     </div>
     <!-- Single Page Header End -->

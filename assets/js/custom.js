@@ -1,33 +1,37 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const serviceContents = document.querySelectorAll(".service-content");
-
-  serviceContents.forEach((container) => {
-    const paragraph = container.querySelector("p");
-    const fullText = paragraph.textContent.trim();
-
-    if (fullText.length > 100) {
-      const truncatedText = fullText.slice(0, 100) + "... ";
-      paragraph.textContent = truncatedText;
-
-      const seeMoreButton = document.createElement("span");
-      seeMoreButton.className = "see-more-button";
-      seeMoreButton.textContent = "See more";
-      paragraph.appendChild(seeMoreButton);
-
-      seeMoreButton.addEventListener("click", function () {
-        if (seeMoreButton.textContent === "See more") {
-          paragraph.textContent = fullText + " ";
-          seeMoreButton.textContent = "See less";
-          paragraph.appendChild(seeMoreButton);
-        } else {
-          paragraph.textContent = truncatedText;
-          seeMoreButton.textContent = "See more";
-          paragraph.appendChild(seeMoreButton);
-        }
-      });
-    }
-  });
-});
+document.addEventListener("DOMContentLoaded", mange_read_more_less());
+function mange_read_more_less()
+{
+  
+    const serviceContents = document.querySelectorAll(".service-content");
+  
+    serviceContents.forEach((container) => {
+      const paragraph = container.querySelector("p");
+      const fullText = paragraph.textContent.trim();
+  
+      if (fullText.length > 100) {
+        const truncatedText = fullText.slice(0, 100) + "... ";
+        paragraph.textContent = truncatedText;
+  
+        const seeMoreButton = document.createElement("span");
+        seeMoreButton.className = "see-more-button";
+        seeMoreButton.textContent = "See more";
+        paragraph.appendChild(seeMoreButton);
+  
+        seeMoreButton.addEventListener("click", function () {
+          if (seeMoreButton.textContent === "See more") {
+            paragraph.textContent = fullText + " ";
+            seeMoreButton.textContent = "See less";
+            paragraph.appendChild(seeMoreButton);
+          } else {
+            paragraph.textContent = truncatedText;
+            seeMoreButton.textContent = "See more";
+            paragraph.appendChild(seeMoreButton);
+          }
+        });
+      }
+    });
+  
+}
 var offset=0;
 
 jQuery('#case_study_load_more').on('click',function(e){
@@ -104,6 +108,7 @@ jQuery('#what_we_do_load_more').on('click',function(e){
       //{
 
           jQuery('#what_we_do_load_more_div_page').append(data.html);
+          mange_read_more_less()
         if(data.greentech_what_we_do_empty)
         {
           
