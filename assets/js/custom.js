@@ -52,7 +52,7 @@ jQuery('#case_study_load_more').on('click',function(e){
     beforeSend: function () {
       // setting a timeout
       jQuery('#case_study_load_more').attr("disabled", true);
-      jQuery('#case_study_load_more').text('loading');
+      jQuery('#case_study_load_more').text('Loading');
   },
     success: function (data) {
      // swal.close();
@@ -96,7 +96,7 @@ jQuery('#what_we_do_load_more').on('click',function(e){
     beforeSend: function () {
       // setting a timeout
       jQuery('#what_we_do_load_more').attr("disabled", true);
-      jQuery('#what_we_do_load_more').text('loading');
+      jQuery('#what_we_do_load_more').text('Loading');
   },
     success: function (data) {
      // swal.close();

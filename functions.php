@@ -153,8 +153,8 @@ add_action( 'widgets_init', 'greentech_widgets_init' );
 function greentech_scripts() {
 	wp_enqueue_style( 'greentech-style', get_stylesheet_uri(), array(), GREENTECH_THEME_VERSION );
 
-	wp_register_style('font_1',  'https://fonts.googleapis.com', array(), false,'all');
-	wp_register_style('font_2',  'https://fonts.gstatic.com', array(), false,'all');
+	wp_register_style('font_1',  'https://fonts.googleapis.com', array(), GREENTECH_THEME_VERSION);
+	wp_register_style('font_2',  'https://fonts.gstatic.com', array(), GREENTECH_THEME_VERSION);
 	wp_register_style('font_3',  'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@600;800&display=swap', array(), GREENTECH_THEME_VERSION);
 	wp_register_style('font_awosome',  'https://use.fontawesome.com/releases/v5.15.4/css/all.css', array(), GREENTECH_THEME_VERSION);
 	wp_register_style('bs_icon',  'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css', array(), GREENTECH_THEME_VERSION);

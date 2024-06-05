@@ -35,33 +35,33 @@ get_header();
               </div>
             </div>
             <div class="col-lg-7">
-              <div class="w-100">
+              <div id="contactPageFormS" class="w-100">
                 <?=do_shortcode('[forminator_form id="116"]')?></div>
               </div>
               <div class="col-lg-5 address_text_col">
-                <div class="d-flex p-3 p-lg-4 rounded mb-4 bg-white">
+                <div class="d-flex p-3 p-lg-4 py_custom_desktop rounded mb-4 bg-white">
                   <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
                   <div>
                     <h5>Address</h5>
-                    <p class="mb-0">
+                    <p class="">
                       <?=get_option('greentech_address')?>
                     </p>
                   </div>
                 </div>
-              <div class="d-flex p-3 p-lg-4 rounded mb-4 bg-white">
+              <div class="d-flex p-3 p-lg-4 py_custom_desktop rounded mb-4 bg-white">
                 <i class="fas fa-envelope fa-2x text-primary me-4"></i>
                 <div>
                   <h5>Mail Us</h5>
-                  <p class="mb-0">
+                  <p class="">
                     <a href="mailto:<?=get_option('greentech_email')?>"><?=get_option('greentech_email')?></a>
                   </p>
                 </div>
               </div>
-              <div class="d-flex p-3 p-lg-4 rounded bg-white">
+              <div class="d-flex p-3 p-lg-4 py_custom_desktop rounded bg-white">
                 <i class="fa fa-phone-alt fa-2x text-primary me-4"></i>
                 <div>
                   <h5>Telephone</h5>
-                  <p class="mb-0">
+                  <p class="">
                     <a href="tel:<?=get_option('greentech_phone_number')?>"><?=get_option('greentech_phone_number')?></a>
                   </p>
                 </div>

@@ -14,9 +14,9 @@ $menu_items = wp_get_menu_array_footer('greentech_footer_menu_1');
 <footer>
       <!-- Footer Start -->
       <div class="container-fluid bg-dark text-white-50 footer pt-5 mt-5">
-        <div class="container py-5">
+        <div class="container py-5"> 
           <div
-            class="pb-4 mb-4"
+            class="pb-4 mb-4 pb-lg-5 mb-lg-5"
             style="border-bottom: 1px solid rgba(226, 175, 24, 0.5)"
           >
             <div class="row g-4 align-items-center">
@@ -28,7 +28,7 @@ $menu_items = wp_get_menu_array_footer('greentech_footer_menu_1');
                   />
                 </a>
               </div>
-              <div class="col-lg-6">
+              <div class="col-lg-6 py-4 py-lg-0">
                 <!-- <div class="position-relative mx-auto">
                   <input
                     class="form-control border-0 w-100 py-3 px-4 rounded-pill"
@@ -43,7 +43,7 @@ $menu_items = wp_get_menu_array_footer('greentech_footer_menu_1');
                     Subscribe Now
                   </button>
                 </div> -->
-                <div class="w-100">
+                <div class="w-100 footer_Subscribe_form position-relative">
                 <?=do_shortcode('[forminator_form id="117"]')?>
                 </div>
               </div>
