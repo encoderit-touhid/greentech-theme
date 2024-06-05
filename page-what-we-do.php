@@ -11,7 +11,17 @@ $args = array(
 
 $greentech_what_we_do = get_posts($args);
 ?>
- <div class="container-fluid service py-5" style="margin-top: 200px;">
+<!-- Single Page Header start -->
+<div class="container-fluid page-header py-5">
+      <h1 class="text-center text-white display-6">What We Do</h1>
+      <ol class="breadcrumb justify-content-center mb-0">
+        <li class="breadcrumb-item"><a href="<?=site_url()?>">Home</a></li>
+        <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
+        <li class="breadcrumb-item active text-white">What We Do</li>
+      </ol>
+  </div>
+
+ <div class="container-fluid service py-5">
       <div class="container py-5">
         <div class="text-center mx-auto mb-5" style="max-width: 700px">
           <h2 class="display-4">WHAT WE DO</h2>

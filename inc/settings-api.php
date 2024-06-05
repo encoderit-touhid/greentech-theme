@@ -39,8 +39,8 @@ function green_tech_example_theme_menu()
 {
 
     add_theme_page(
-        'Green Tech Settings',                     // The title to be displayed in the browser window for this page.
-        'Green Tech Settings',                    // The text to be displayed for this menu item
+        'GreenTec Settings',                     // The title to be displayed in the browser window for this page.
+        'GreenTec Settings',                    // The text to be displayed for this menu item
         'administrator',                    // Which type of users can see this menu item
         'green_tech_theme_options',            // The unique ID - that is, the slug - for this menu item
         'green_tech_theme_display'                // The name of the function to call when rendering this menu's page

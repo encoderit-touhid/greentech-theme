@@ -93,8 +93,8 @@ add_action("init", "greentech_cpts");
 
 function greentech_cpts_admin_menu() {
     add_menu_page(
-        'Green Tech CPT',
-        'Green Tech CPT',
+        'GreenTec CPT',
+        'GreenTec CPT',
         'manage_options',
         'greentech_theme_menu_cpt',
         '', 
