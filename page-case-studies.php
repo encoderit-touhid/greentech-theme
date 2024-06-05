@@ -85,7 +85,7 @@ $query = get_posts($args);
       {
         ?>
         <div class="text-center mt-4">
-          <a href="" class="btn px-4 py-2 text-white rounded bg-primary" id="case_study_load_more">Load more</a>
+          <a href="" class="btn px-4 py-2 text-white rounded bg-primary" id="case_study_load_more">Load More</a>
           </a>
         </div>
         <?php
