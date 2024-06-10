@@ -128,7 +128,7 @@ footer a.btn-link {
   max-height: 55px !important;
   position: absolute !important;
   bottom: 0;
-  right: 15px;
+  right: 0;
   height: max-content !important;
   width: max-content !important;
   margin-bottom: 0 !important;
@@ -250,4 +250,17 @@ footer a.btn-link {
   .breadcrumb {
     text-align: center;
   }
+  .footer_Subscribe_form .forminator-has_error .forminator-error-message,
+  .footer_Subscribe_form .forminator-button-submit {
+  position: unset !important;
+}
+.footer_Subscribe_form .forminator-row {
+     margin-bottom: 20px !important; 
+}
+.footer_Subscribe_form .forminator-row-last {
+    margin-bottom: 0 !important;
+}
+.footer .col-lg-3 .d-flex.justify-content-end {
+    justify-content: start !important;
+}
 }
