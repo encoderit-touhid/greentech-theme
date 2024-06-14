@@ -27,7 +27,7 @@ get_header();
     <!-- Single Page Header End -->
 
     <!-- Case Studies Start-->
-    <?=get_the_content()?>
+    <?php the_content( )?>
    
 
 <?php
