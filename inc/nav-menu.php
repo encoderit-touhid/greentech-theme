@@ -99,6 +99,7 @@ function get_secotor_menu_cpts()
     $args = array(
         'post_status' => 'publish',
         'post_type'   => 'greentech_sectors',
+		'posts_per_page'=>-1
       );
       
       $query = get_posts($args);
